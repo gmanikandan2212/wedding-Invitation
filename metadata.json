@@ -1,0 +1,6 @@
+{
+  "name": "P. Precilla & G. Michael Wedding Invitation",
+  "description": "The bespoke digital Christian wedding invitation website for P. Precilla and G. Michael on Friday, 20 November 2026 at CSI Henry Little Memorial Church, Karur.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

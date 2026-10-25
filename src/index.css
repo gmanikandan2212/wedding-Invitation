@@ -1,0 +1,270 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-script: "Alex Brush", cursive;
+    --font-serif: "Playfair Display", Georgia, serif;
+    --font-cinzel: "Cinzel", Georgia, serif;
+    --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #faf8f2;
+    color: #0d3627;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom typographic classes */
+.font-script {
+  font-family: var(--font-script);
+}
+
+.font-serif-title {
+  font-family: var(--font-serif);
+}
+
+.font-cinzel {
+  font-family: var(--font-cinzel);
+}
+
+/* Brand Color Utility Classes */
+.text-crimson-brand {
+  color: #8e163b;
+}
+
+.text-forest-brand {
+  color: #0d3627;
+}
+
+.text-gold-brand {
+  color: #c59c3a;
+}
+
+.bg-forest-brand {
+  background-color: #0d3627;
+}
+
+.bg-gold-brand {
+  background-color: #c59c3a;
+}
+
+.border-gold-brand {
+  border-color: rgba(197, 156, 58, 0.45);
+}
+
+/* High-Quality Christian Wedding Background with Cathedral Radiance & Celestial Glow */
+.bg-wedding-botanical {
+  background-color: #faf8f2;
+  background-image: 
+    /* Soft Cathedral Sunbeams from Heavens */
+    radial-gradient(ellipse 100% 60% at 50% -10%, rgba(255, 250, 230, 0.98) 0%, rgba(247, 243, 232, 0.75) 45%, transparent 85%),
+    /* Ethereal Sky & Starlight Tint */
+    radial-gradient(circle at 15% 15%, rgba(197, 156, 58, 0.12) 0%, transparent 40%),
+    radial-gradient(circle at 85% 20%, rgba(76, 175, 196, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.6) 0%, transparent 60%),
+    radial-gradient(circle at 10% 75%, rgba(13, 54, 39, 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 90% 85%, rgba(197, 156, 58, 0.10) 0%, transparent 55%),
+    linear-gradient(180deg, #fdfbf7 0%, #faf8f2 20%, #f6f3ea 50%, #faf7ef 80%, #fdfbf7 100%);
+  background-attachment: fixed;
+}
+
+/* Keyframe Animations for Icons, Text Overlays, and Imagery */
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes sway-gentle {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+}
+
+@keyframes pulse-gold-glow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(197, 156, 58, 0.2), 0 0 30px rgba(197, 156, 58, 0.08);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(197, 156, 58, 0.45), 0 0 50px rgba(197, 156, 58, 0.2);
+  }
+}
+
+@keyframes shimmer-sweep {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-float-slow {
+  animation: float-slow 4s ease-in-out infinite;
+}
+
+.animate-sway {
+  animation: sway-gentle 5s ease-in-out infinite;
+}
+
+.animate-gold-glow {
+  animation: pulse-gold-glow 3.5s ease-in-out infinite;
+}
+
+/* Animated Shimmer Text Overlay */
+.text-shimmer {
+  background: linear-gradient(
+    90deg,
+    #8e163b 0%,
+    #c59c3a 25%,
+    #8e163b 50%,
+    #e2c170 75%,
+    #8e163b 100%
+  );
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shimmer-sweep 8s linear infinite;
+}
+
+/* High-Quality Card Surface */
+.wedding-card-surface {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(8px);
+  border: 2px solid rgba(197, 156, 58, 0.38);
+  box-shadow: 0 16px 45px rgba(13, 54, 39, 0.07), 0 4px 20px rgba(197, 156, 58, 0.09);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.wedding-card-surface:hover {
+  border-color: rgba(197, 156, 58, 0.8);
+  box-shadow: 0 20px 50px rgba(13, 54, 39, 0.11), 0 8px 25px rgba(197, 156, 58, 0.18);
+}
+
+/* Interactive Icon Hover micro-animations */
+.icon-interactive {
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.icon-interactive:hover {
+  transform: translateY(-4px) scale(1.08);
+  box-shadow: 0 8px 20px rgba(197, 156, 58, 0.3);
+}
+
+button, a {
+  touch-action: manipulation;
+}
+
+/* Section entrance animations */
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Professional Section Text Reveal Animations */
+@keyframes text-slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes text-glow-pulse {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(197, 156, 58, 0.2);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(197, 156, 58, 0.5), 0 0 35px rgba(142, 22, 59, 0.3);
+  }
+}
+
+@keyframes wax-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 10px 30px rgba(142, 22, 59, 0.38), 0 4px 12px rgba(0, 0, 0, 0.22);
+  }
+  50% {
+    transform: scale(1.04);
+    box-shadow: 0 14px 40px rgba(142, 22, 59, 0.55), 0 6px 18px rgba(197, 156, 58, 0.4);
+  }
+}
+
+@keyframes envelope-open-3d {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(175deg);
+  }
+}
+
+@keyframes letter-slide-out {
+  0% {
+    transform: translateY(0) scale(0.96);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(-80px) scale(1.02);
+    opacity: 1;
+  }
+}
+
+@keyframes sparkle-burst {
+  0% {
+    transform: translate(0, 0) scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) scale(1.4);
+    opacity: 0;
+  }
+}
+
+.animate-text-reveal {
+  animation: text-slide-up 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-wax-seal {
+  animation: wax-pulse 3s ease-in-out infinite;
+}
+
+.animate-glow-text {
+  animation: text-glow-pulse 4s ease-in-out infinite;
+}
+
+/* 3D Envelope utilities */
+.perspective-1200 {
+  perspective: 1200px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.origin-top-edge {
+  transform-origin: top center;
+}
+
